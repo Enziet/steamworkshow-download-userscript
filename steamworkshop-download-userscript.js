@@ -3,7 +3,7 @@
 // @namespace      http://github.com/enziet
 // @description    Adds a button to the Steam Workshop pages (even collections) that lets you head straight to the specific addon page at steamworkshop.download
 // @include        *steamcommunity.com/sharedfiles/filedetails/?id=*
-// @version        1.1.0
+// @version        1.1.1
 // @downloadURL    http://steamworkshopdownloader.com/static/files/swd.user.js
 // @require        https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
 // ==/UserScript==
