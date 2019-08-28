@@ -5,14 +5,19 @@
 // @include        *steamcommunity.com/sharedfiles/filedetails/?id=*
 // @version        1.0.2
 // @downloadURL    http://steamworkshopdownloader.com/static/files/swd.user.js
+// @require        https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
 // ==/UserScript==
 
 // Let's first check to see if this is a shared collection. If it is, iterate though all the collectionItem divs and add the link to
 // http://steamworkshop.download/download/view/id from the id parsed by the div's id: 'sharedfile_[id here]'
 
-var collectionItems = document.getElementsByClassName("collectionItem");
+var mods = $(".collectionItem");
 
-if (collectionItems.length > 0) {
+if (mods.length > 0) {
+  mods.each(function( index ) {
+    var modId = $(this).attr("id").slice(11);
+    console.log( "collectionItem#" + index + " modId = " + modId );
+  });
 }
 else {
 
