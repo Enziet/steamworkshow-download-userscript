@@ -13,16 +13,20 @@
 
 var mods = $(".collectionItem");
 if (mods.length > 0) {
+  $("head").append("<style type='text/css'>" +
+    ".general_btn.subscribe.myDlBtn:hover {" +
+    "background-image: url(https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/btn_blue.png) !important;"+
+    "}"+
+    "</style>");
   mods.each(function( index ) {
+    var modId = $(this).attr("id").slice(11);
+
     var btn = document.createElement('a');
-    btn.setAttribute('class', 'btn_green_white_innerfade btn_border_2px btn_medium');
+    btn.setAttribute('class', 'general_btn subscribe myDlBtn ');
     btn.setAttribute('href', 'http://steamworkshop.download/download/view/' + id);
     btn.innerHTML = '<div class="subscribeIcon"></div>' +
-    '<span class="subscribeText">' +
-    '<div class="subscribeOption subscribe selected" id="SubscribeItemOptionAdd">Download</div>' +
-    '</span>';
+    '<span class="subscribeText">download</span>';
 
-    var modId = $(this).attr("id").slice(11);
     $(this).find(".subscriptionControls").first().append(btn);
     //console.log( "collectionItem#" + index + " modId = " + modId );
   });
