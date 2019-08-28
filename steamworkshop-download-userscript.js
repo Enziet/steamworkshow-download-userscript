@@ -12,11 +12,19 @@
 // http://steamworkshop.download/download/view/id from the id parsed by the div's id: 'sharedfile_[id here]'
 
 var mods = $(".collectionItem");
-
 if (mods.length > 0) {
   mods.each(function( index ) {
+    var btn = document.createElement('a');
+    btn.setAttribute('class', 'btn_green_white_innerfade btn_border_2px btn_medium');
+    btn.setAttribute('href', 'http://steamworkshop.download/download/view/' + id);
+    btn.innerHTML = '<div class="subscribeIcon"></div>' +
+    '<span class="subscribeText">' +
+    '<div class="subscribeOption subscribe selected" id="SubscribeItemOptionAdd">Download</div>' +
+    '</span>';
+
     var modId = $(this).attr("id").slice(11);
-    console.log( "collectionItem#" + index + " modId = " + modId );
+    $(this).find(".subscriptionControls").first().append(btn);
+    //console.log( "collectionItem#" + index + " modId = " + modId );
   });
 }
 else {
