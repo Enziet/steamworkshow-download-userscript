@@ -23,7 +23,7 @@ if (mods.length > 0) {
 
     var btn = document.createElement('a');
     btn.setAttribute('class', 'general_btn subscribe myDlBtn ');
-    btn.setAttribute('href', 'http://steamworkshop.download/download/view/' + id);
+    btn.setAttribute('href', 'http://steamworkshop.download/download/view/' + modId);
     btn.innerHTML = '<div class="subscribeIcon"></div>' +
     '<span class="subscribeText">download</span>';
 
